@@ -33,18 +33,20 @@ export function MainPage() {
 }
 
 const Background = styled.div`
+position: relative;
     display: flex;
     width: 100%;
-    height: 100%;
-    background : url(/asset/image/background-main.png) fixed;
+    height: 100vh;
+    background : url(/asset/image/background-main.png);
+    background-attachment: fixed;
     background-size: cover;
+    overflow: scroll;
 `
 
 const MainSection = styled.section`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
 `
 
 const NavSection = styled.section`
@@ -69,7 +71,7 @@ const ContentsBox = styled.aside`
 `
 
 const SidebannerBox = styled.aside`
-    position: absolute;
+    position: fixed;
     width: calc(100% - 90px);
     bottom: 0px;
     overflow: hidden;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { MainImage } from "./MainImage";
 
 export function LandingPage() {
   return (
@@ -30,23 +30,25 @@ export function LandingPage() {
                     
                 </h1>
                 <h2>
-                디자인과 프론트엔드 개발을 좋아하는 김주비 입니다. 상상할수 있는것을 구현하며,
+                디자인과 프론트엔드 개발을 좋아하는 김주비 입니다. 상상할수 있는것을 구현하며, <br/>
                 더 나아가 누군가의 상상이 될수있는 <span>프론트엔드 개발자</span>가 되고자합니다.
                 <p>
                 <br/>
                 * 본 페이지는 비상업적 목적의 개인포트폴리오 페이지입니다.
                 </p>
                 </h2>
+                <MainImage/>
             </TitleBox>
         </LandingSection>
   );
 }
 
 const LandingSection = styled.div`
-    
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 70px;
+    width: 100%;
     
     .my-position{
         display: flex;
@@ -81,7 +83,6 @@ const LandingSection = styled.div`
 
 const TitleBox = styled.div`
     
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
