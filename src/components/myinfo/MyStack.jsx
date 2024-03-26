@@ -3,29 +3,45 @@ import {stackData} from "../../data/stackData"
 import {toolData} from "../../data/toolData"
 import {studyingData} from "../../data/studyingData"
 
+import { SkillDataState } from '../../atom/skillIcon';
+import { useRecoilState } from 'recoil';
+import { useState } from "react";
+
 export function MyStack() {
 
+    const [ skillData, setSkillData] = useRecoilState(SkillDataState);
+    const [ clickIcon, secClickIcon ] = useState(1);
+
+    const handelSkillIcon = (item,idx) => {
+        console.log(idx)
+        setSkillData(item)
+        secClickIcon(idx)
+    }
 
     return (
             <MyStackBox>
                 <StackContent>
                 <h2>STACK</h2>
                 <ul className="icons-box">
-                    {stackData.map((item,idx)=>(<li>{item.icon} {item.name}</li>))}
+                    {stackData.map((item,idx)=>(<li key={idx} className={`skill-icon ${
+                clickIcon === item.index && `icon-click`
+                }`} onClick={() => {handelSkillIcon(item,item.index)}}>{item.icon} {item.name}</li>))}
                 </ul>
                 </StackContent>
 
                 <StackContent>
                 <h2>TOOL</h2>
                 <ul className="icons-box">
-                    {toolData.map((item,idx)=>(<li>{item.icon} {item.name}</li>))}
+                    {toolData.map((item,idx)=>(<li key={idx} className={`skill-icon ${
+                clickIcon === item.index && `icon-click`
+                }`} onClick={() => {handelSkillIcon(item,item.index)}}>{item.icon} {item.name}</li>))}
                 </ul>
                 </StackContent>
 
                 <StackContent>
                 <h2>STUDYING</h2>
                 <ul className="icons-box">
-                    {studyingData.map((item,idx)=>(<li>{item.icon} {item.name}</li>))}
+                    {studyingData.map((item,idx)=>(<li key={idx} className="skill-icon">{item.icon} {item.name}</li>))}
                 </ul>
                 </StackContent>
             </MyStackBox>
@@ -52,7 +68,8 @@ const StackContent = styled.div`
         flex-wrap: wrap;
     }
 
-    .icons-box> li{
+    
+    .skill-icon{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -62,22 +79,26 @@ const StackContent = styled.div`
         padding: 0px 10px;
         height: 27px;
         letter-spacing: 1px;
-        border-radius: 5px;
+        border-radius: 50px;
         color: #727272;
         font-family: 'GmarketM';
         border: 1px solid var(--color-main-003);
         background-color: #212121;
         cursor: pointer;
         transition: all ease-in-out 0.3s;
-
+        
         >* {
             margin: 0px 5px;
         }
     }
-
-    .icons-box> li:hover {
+    
+    .skill-icon:hover {
+        color: var(--color-main-001);
+    }
+    
+    .icon-click{
         border-color: var(--color-main-002);
         color: var(--color-main-001);
     }
-
+    
 `
