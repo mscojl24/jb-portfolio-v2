@@ -17,7 +17,6 @@ export function MySkill() {
 const MyskillBox = styled.div`
     display: flex;
     width: 100%;
-    height: calc(100% - 160px);
 
     > article {
         overflow: hidden;

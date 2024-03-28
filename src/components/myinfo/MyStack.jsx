@@ -3,19 +3,17 @@ import {stackData} from "../../data/stackData"
 import {toolData} from "../../data/toolData"
 import {studyingData} from "../../data/studyingData"
 
-import { SkillDataState } from '../../atom/skillIcon';
+import { SkillDataState, SkillIdxState } from '../../atom/skillIcon';
 import { useRecoilState } from 'recoil';
-import { useState } from "react";
 
 export function MyStack() {
 
-    const [ skillData, setSkillData] = useRecoilState(SkillDataState);
-    const [ clickIcon, secClickIcon ] = useState(1);
+    const [ , setSkillData] = useRecoilState(SkillDataState);
+    const [ skillIdx, setSkillIdx ] = useRecoilState(SkillIdxState);
 
     const handelSkillIcon = (item,idx) => {
-        console.log(idx)
         setSkillData(item)
-        secClickIcon(idx)
+        setSkillIdx(idx)
     }
 
     return (
@@ -24,7 +22,7 @@ export function MyStack() {
                 <h2>STACK</h2>
                 <ul className="icons-box">
                     {stackData.map((item,idx)=>(<li key={idx} className={`skill-icon ${
-                clickIcon === item.index && `icon-click`
+                skillIdx === item.index && `icon-click`
                 }`} onClick={() => {handelSkillIcon(item,item.index)}}>{item.icon} {item.name}</li>))}
                 </ul>
                 </StackContent>
@@ -33,7 +31,7 @@ export function MyStack() {
                 <h2>TOOL</h2>
                 <ul className="icons-box">
                     {toolData.map((item,idx)=>(<li key={idx} className={`skill-icon ${
-                clickIcon === item.index && `icon-click`
+                skillIdx === item.index && `icon-click`
                 }`} onClick={() => {handelSkillIcon(item,item.index)}}>{item.icon} {item.name}</li>))}
                 </ul>
                 </StackContent>
@@ -58,6 +56,13 @@ const MyStackBox = styled.article`
 
 const StackContent = styled.div`
     margin: 70px;
+    overflow: hidden;
+    min-width: 400px;
+
+    @media (max-width: 1500px) {
+        min-width: auto;
+    }
+
 
     h2 {
         margin-bottom: 20px;
@@ -73,7 +78,7 @@ const StackContent = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         margin: 5px;
         text-transform: uppercase;
         padding: 0px 10px;

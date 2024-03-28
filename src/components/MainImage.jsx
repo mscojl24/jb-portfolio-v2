@@ -19,7 +19,7 @@ justify-content: center;
     height: 630px;
     position: absolute;
     right: 250px;
-    top: 40%;
+    top: 28%;
     transform: translateY(-50%);
 
     img{

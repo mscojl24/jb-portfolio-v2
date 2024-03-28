@@ -8,6 +8,7 @@ import {
   SiAdobephotoshop,
   SiAdobeillustrator,
 } from "react-icons/si";
+import { RiFilePpt2Fill,RiFileWord2Fil,RiFileExcel2Fill, RiFileWord2Fill } from "react-icons/ri";
 
 export const toolData = [
   {
@@ -81,5 +82,32 @@ export const toolData = [
       "Adobe Illustrator를 사용하여 디자인 및 간단한 벡터 작업을 진행할 수 있어요.",
     color: "#ff9a00",
     gauge: 60,
+  },
+  {
+    index: 20,
+    name: "Excel",
+    icon: <RiFileExcel2Fill color="#1E6C41" />,
+    contents:
+      "Microsoft Excel 및 구글 스프레드시트를 통해 문서에 함수를 적용하고 통계를 효과적으로 정리할 수 있어요.",
+    color: "#ff9a00",
+    gauge: 80,
+  },
+  {
+    index: 21,
+    name: "Word",
+    icon: <RiFileWord2Fill color="#2A5495" />,
+    contents:
+      "Microsoft Word 및 구글 문서를 통해 가독성 좋은 문서를 제작할 수 있어요.",
+    color: "#ff9a00",
+    gauge: 80,
+  },
+  {
+    index: 22,
+    name: "PowerPoint",
+    icon: <RiFilePpt2Fill color="#B9361A"/>,
+    contents:
+      "Microsoft PPT를 이용하여 기획제안서를 제작하고, 이미지 도식화를 통해 내용을 효과적으로 전달할 수 있어요.",
+    color: "#ff9a00",
+    gauge: 70,
   },
 ];

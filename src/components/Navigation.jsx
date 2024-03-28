@@ -1,15 +1,24 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
+import { useRecoilState } from "recoil";
+import { navClickState } from "../atom/mainstate";
 
 export function Navigation() {
+
+const [navClick, setNavClick] = useRecoilState(navClickState);
+
+const handleClickNav = () =>{
+    setNavClick(!navClick)
+}
+
   return (
-        <NavigationBox>
-            <div className="logo"><img src="../asset/image/logo_image.png" alt="logo image"/></div>
+        <NavigationBox height={`${navClick ? "100%" : "0%"}`}>
+            <div className="logo" onClick={()=>{handleClickNav()}} ><img src="../asset/image/logo_image.png" alt="logo image"/></div>
             <ul>
-            <Link to="/"><li className="menu-ani-001"><span>MAIN</span><div className="menu-point"></div></li></Link>
-            <Link to="/myskill"><li className="menu-ani-002"><span>MY SKILL</span><div className="menu-point"></div></li></Link>
-            <Link to="/portfolio"><li className="menu-ani-003"><span>PORTFOLIO</span><div className="menu-point"></div></li></Link>
-            <Link to="/closing"><li className="menu-ani-004"><span>CLOSING</span><div className="menu-point"></div></li></Link>
+                <Link to="/" onClick={()=>{handleClickNav()}}><li className="menu menu-ani-001"><span>MAIN</span></li></Link>
+                <Link to="/myskill" onClick={()=>{handleClickNav()}}><li className="menu menu-ani-002"><span>MY SKILL</span></li></Link>
+                <Link to="/portfolio" onClick={()=>{handleClickNav()}}><li className="menu menu-ani-003"><span>PORTFOLIO</span></li></Link>
+                <Link to="/closing" onClick={()=>{handleClickNav()}}><li className="menu menu-ani-004"><span>CLOSING</span></li></Link>
             </ul>
         </NavigationBox>
   );
@@ -17,10 +26,17 @@ export function Navigation() {
 
 
 const NavigationBox = styled.div`
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 30px 0px;
+    position: fixed;
+    width: 100%;
+    top:0px;
+    left: 0px;
+
+    .logo {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        z-index: 3;
+    }
 
     .logo > img{
         width: 40px;
@@ -42,47 +58,31 @@ const NavigationBox = styled.div`
         
     }
 
-
-    ul{
-        position: absolute;
-        width: 150px;
-        top: 45%;
-        left: -148px;
-
-        a {
-            text-decoration: none;
-        }
-        
-        li {
-            display: flex;
-            justify-content: right;
-            align-items: center;
-            font-size: 0.6em;
-            margin-bottom: 60px;
-            letter-spacing: 1px;
-            cursor: pointer;
-            
-            span{
-                color: var(--color-main-002);
-                transition: ease-in-out 0.2s all;
-            }
-        }
-
-        li:hover>span{
-            color: var(--color-sub-002);
-            transform: translateX(-10px);
-        }
-
-        .menu-point{
-            width: 6px;
-            height: 6px;
-            background-color: var(--color-main-002);
-            border-radius: 5px;
-            margin-left: 20px;
-        }
+    a{
+        text-decoration: none;
     }
 
+    ul {
+        position: fixed;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        backdrop-filter: blur(40px);
+        transition: all ease-in-out 0.3s;
+        height: ${props => props.height || "0%"};
+        overflow: hidden;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
+    }
+    
+    .menu{
+        margin: 30px;
+        font-size: 2rem;
+        font-family:'GmarketB';
+    }
 
     .menu-ani-001{opacity:0; animation: menuAnimation 0.3s forwards 0s;}
     .menu-ani-002{opacity:0; animation: menuAnimation 0.3s forwards 0.2s;}

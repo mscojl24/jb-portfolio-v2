@@ -1,15 +1,20 @@
 import { atom } from "recoil";
-
+import { SiAxios} from "react-icons/si";
 
 export const SkillDataState = atom({
     key: 'skillData',
     default: {
-        index: 1,
-        name: "Html",
-        icon: '',
-        contents:
-          "표준과 웹 접근성을 준수하며 태그의 의미와 사용성을 알고 문서의 구조를 고려해 시맨틱하게 마크업할 수 있어요.",
-        color: "#f16528",
-        gauge: 100,
-      }
+      index: 9,
+      name: "Axios",
+      icon: <SiAxios color="#5a29e4" />,
+      contents:
+        " Axios를 활용하여 서버와의 HTTP 통신을 처리할 수 있어요. Axios의 설정과 에러 핸들링을 통해 안정적이고 효율적인 네트워크 요청이 가능해요.",
+      color: "#5a29e4",
+      gauge: 80,
+    }
+});
+
+export const SkillIdxState = atom({
+  key: 'skillIdx',
+  default: 9
 });

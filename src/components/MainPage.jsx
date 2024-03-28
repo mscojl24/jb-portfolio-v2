@@ -6,8 +6,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MySkill } from "./MySkill";
 import { Portfolio } from "./Portfolio";
 import { Closing } from "./Closing";
+import { navClickState } from "../atom/mainstate";
+import { useRecoilState } from "recoil";
 
 export function MainPage() {
+
+    const [navClick] = useRecoilState(navClickState);
+
   return (
     <BrowserRouter>
         <Background>
@@ -20,9 +25,6 @@ export function MainPage() {
                         <Route path="/closing" element={<Closing />} />
                     </Routes>
                 </ContentsBox>
-                <SidebannerBox>
-                    <SideBanner/>
-                </SidebannerBox>
             </MainSection>
             <NavSection>
                 <Navigation/>
@@ -36,11 +38,12 @@ const Background = styled.div`
 position: relative;
     display: flex;
     width: 100%;
-    height: 100vh;
     background : url(/asset/image/background-main.png);
     background-attachment: fixed;
     background-size: cover;
     overflow: scroll;
+    min-height: 100vh;
+    
 `
 
 const MainSection = styled.section`
@@ -50,24 +53,27 @@ const MainSection = styled.section`
 `
 
 const NavSection = styled.section`
-    min-width: 90px;
-    height: 100vh;
-    border-left: 1px solid var(--color-main-003);
-    z-index: 1;
-
-    @media (max-width: 1050px) {
-    display: none;
-    }
 `
 
 
 const ContentsBox = styled.aside`
     display: flex;
     height: 100%;
+    overflow: scroll;
+    
 
     @media (max-width: 1050px) {
         justify-content: center;
     }
+
+    .scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
 `
 
 const SidebannerBox = styled.aside`
@@ -78,7 +84,7 @@ const SidebannerBox = styled.aside`
     height: 160px;
     border-top: 1px solid var(--color-main-003);
     background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(40px);
 
     @media (max-width: 1050px) {
     display: none;

@@ -38,12 +38,18 @@ const SkillDataBox = styled.article`
 
     .margin-box >*:nth-child(1){
       font-size: 11rem;
-      animation: IconMotion 0.3s forwards;
+      animation: IconMotion 0.6s forwards;
     }
 
     
     @keyframes IconMotion {
-        50%{
+      
+      0%{
+        opacity: 0;
+        filter: blur(20px);
+      }
+      50%{
+            opacity: 1;
             transform: scale(1.2);
         }
     }
