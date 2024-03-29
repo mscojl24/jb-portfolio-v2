@@ -1,19 +1,81 @@
 import styled from "styled-components";
 import {designData} from "../data/designData"
+import { useState } from "react";
+import { SwiperImage } from "./SwiperImage";
+import { useRecoilState } from "recoil";
+import { detailImgState, sidePageOpenState, swiperOpenState } from "../atom/swiperopen";
+import { PiImagesSquareDuotone } from "react-icons/pi";
+import { TfiLayoutListThumb } from "react-icons/tfi";
 
 export function Portfolio() {
 
+  const [item, setItem] = useState(designData)
+  const [, setSwiperOpen] = useRecoilState(swiperOpenState)
+  const [, setDetailImg] = useRecoilState(detailImgState)
+  const [, setSideOpen] = useRecoilState(sidePageOpenState)
+
+  const [hoveredComponent, setHoveredComponent] = useState('all');
+
+  const handleMouseEnter = (idx) => {
+    setHoveredComponent(idx);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredComponent('all');
+  };
+
+  const handleCategory = (category) => {
+
+    switch(category) {
+        case "ALL":
+            setItem(designData);
+            break;
+        case "WEB":
+        case "CARDNEWS":
+        case "ETC":
+            const filteredData = designData.filter(item => item.category === category);
+            setItem(filteredData);
+            break;
+        default:
+            // 기본적으로 "ALL"로 설정
+            setItem(designData);
+            break;
+    }
+}
+
+const handleClickImg = (item) => {
+  setDetailImg(item)
+
+
+      if(item.sidepage){
+        setSwiperOpen(false);
+        setSideOpen(true);
+        
+    }else{
+        setSwiperOpen(true);
+        setSideOpen(false);
+    }
+}
 
   return (
         <PortfolioBox>
-            <div className="port-category">
-                    <button>ALL</button>
-                    <button>WEBSITE</button>
-                    <button>ETC</button>
+                <div className="port-category">
+                    <button onClick={()=>{handleCategory("ALL")}}>ALL</button>
+                    <button onClick={()=>{handleCategory("WEB")}}>WEB SITE</button>
+                    <button onClick={()=>{handleCategory("CARDNEWS")}}>CARD NEWS</button>
+                    <button onClick={()=>{handleCategory("ETC")}}>ETC</button>
                 </div>
                 <ul className="port-list">
-                  {designData.map((item,index)=>(
-                    <CardList src={item.image[0]} sec={index * 0.1}>
+                  {item.map((item,index)=>(
+                    <CardList key={index} src={item.image[0]} sec={index * 0.1} onClick={()=>{handleClickImg(item)}}
+                      onMouseEnter={() => handleMouseEnter(item.index)}
+                      onMouseLeave={handleMouseLeave}
+                      className={hoveredComponent === 'all' ? '' : 'blurred'}
+                    >
+                      <div className="more-image">
+                        {item.image.length > 1 && <p><PiImagesSquareDuotone /></p>}
+                        {!item.Personal && <p className="font-size colorT"><TfiLayoutListThumb /></p> }
+                      </div>
                       <div className="speech-bubble">{item.name}</div>
                     </CardList>
                   ))}
@@ -24,13 +86,17 @@ export function Portfolio() {
 
 
 const PortfolioBox = styled.div`
+position: relative;
 display: flex;
 align-items: center;
 flex-direction: column;
 width: 100%;
+height: 100vh;
+overflow: scroll;
 opacity: 0;
 filter: blur(30px);
 animation: blur 1s forwards;
+
 
     .port-category {
       display: flex;
@@ -51,9 +117,10 @@ animation: blur 1s forwards;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      width: 50%;
+      width: 60%;
       /* height: 100%; */
       padding-bottom: 300px;
+      transition: all ease-in-out 0.3s;
     }
     
     
@@ -63,13 +130,16 @@ animation: blur 1s forwards;
         filter: blur(0px);
       } 
     }
+
+    @media (max-width: 1100px) {
+      .port-list{ width: 80%;}
+      }
+
   
     
     `
-
-
 const CardList = styled.li`
-  
+      position: relative;
       box-sizing: border-box;
       filter: blur(0px);
       display: flex;
@@ -87,6 +157,38 @@ const CardList = styled.li`
       transform: translateY(-40px);
       opacity: 0;
       animation: showCard 0.5s forwards ${props => props.sec || "0"}s;
+
+      .more-image{
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        display: flex;
+        P{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 5px;
+          background-color: rgba(255,255,255,0.4);
+          border-radius: 5px;
+          margin-left: 5px;
+          color: var(--color-main-004);
+          border: 1px solid #666;
+        }
+      }
+
+      &.blurred{
+        filter: blur(10px);
+
+      }
+
+      &:hover{
+        filter: blur(0px);
+      }
+
+      @media (max-width: 1100px) {
+        width: 150px;
+        height: 150px;
+      }
 
       @keyframes showCard {
         100%{
@@ -126,9 +228,9 @@ const CardList = styled.li`
           box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
           font-size: 0.8rem;
           font-family: 'GmarketM';
-          transform: translateY(-150px);
+          transform: translateY(-170px);
           opacity: 0;
-          animation: moving 0.3s forwards;
+          animation: moving 0.6s forwards;
         }
 
         .speech-bubble:after {

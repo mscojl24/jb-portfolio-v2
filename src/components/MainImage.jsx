@@ -13,14 +13,11 @@ export function MainImage() {
 }
 
 const MainImageBox = styled.article`
-display: flex;
-justify-content: center;
-    width: 630px;
-    height: 630px;
-    position: absolute;
-    right: 250px;
-    top: 28%;
-    transform: translateY(-50%);
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 170px 0px;
 
     img{
         position: absolute;
@@ -61,15 +58,13 @@ justify-content: center;
 
     @media (max-width: 1700px) {
         transform: scale(0.7);
-        right: 100px;
-        top: 10%;
     }
 
     @media (max-width: 1500px) {
         display: none;
     }
 
-    @media (max-width: 1020px) {
+    @media (max-width: 1050px) {
         display: block;
         position: relative;
         display: flex;
@@ -79,6 +74,7 @@ justify-content: center;
         transform: scale(0.5);
         right: 0px;
         top: 0px;
+        padding: 50px 0px;
     }
 
 `

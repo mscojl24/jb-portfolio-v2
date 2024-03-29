@@ -62,7 +62,6 @@ const BannerSlider = styled.div`
 
     .card_list{
         display: flex;
-        /* border:1px solid red; */
         >* {
             margin-left: 20px;
         }

@@ -6,7 +6,7 @@ export function MyProfile() {
             <MyProfileBox>
                 <div className="margin-box">
                     <p className="sub-text">Hellow! I’m jubee</p>
-                    <p className="sub-text2">상상력을 자극하는 디자이너 & 개발자</p>
+                    <p className="sub-text2">상상력을 자극하는 UI/UX 개발자</p>
                     <h1 className="my-name">김주비</h1>
                     <ul>
                         <li>생년월일</li>

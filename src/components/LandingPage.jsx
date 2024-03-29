@@ -14,34 +14,39 @@ export function LandingPage() {
                 <li>PUBLISING</li>
             </ul>
             <TitleBox>
-                <h1>
-                    <span className="title title-motion1">J</span>
-                    <span className="title title-motion2">U</span>
-                    <span className="title title-motion3">B</span>
-                    <span className="title title-motion4">E</span>
-                    <span className="title title-motion5">E</span><br/>
-                    <span className="title title-motion6">P</span>
-                    <span className="title title-motion7">O</span>
-                    <span className="title title-motion8">R</span>
-                    <span className="title title-motion9">T</span>
-                    <span className="title title-motion10">F</span>
-                    <span className="title title-motion11">O</span>
-                    <span className="title title-motion12">L</span>
-                    <span className="title title-motion13">I</span>
-                    <span className="title title-motion14">O</span>
-                    
-                    
-                </h1>
-                <h2>
-                디자인과 프론트엔드 개발을 좋아하는 김주비 입니다. 상상할수 있는것을 구현하며, <br/>
-                더 나아가 누군가의 상상이 될수있는 <span>프론트엔드 개발자</span>가 되고자합니다.
-                <p>
-                <br/>
-                * 본 페이지는 비상업적 목적의 개인포트폴리오 페이지입니다.
-                </p>
-                </h2>
+                <div className="title-box">
+                    <h1>
+                        <span className="title title-motion1">J</span>
+                        <span className="title title-motion2">U</span>
+                        <span className="title title-motion3">B</span>
+                        <span className="title title-motion4">E</span>
+                        <span className="title title-motion5">E</span><br/>
+                        <span className="title title-motion6">P</span>
+                        <span className="title title-motion7">O</span>
+                        <span className="title title-motion8">R</span>
+                        <span className="title title-motion9">T</span>
+                        <span className="title title-motion10">F</span>
+                        <span className="title title-motion11">O</span>
+                        <span className="title title-motion12">L</span>
+                        <span className="title title-motion13">I</span>
+                        <span className="title title-motion14">O</span>
+                        
+                        
+                    </h1>
+                    <h2>
+                    디자인과 프론트엔드 개발을 좋아하는 김주비 입니다. 상상할수 있는것을 구현하며, <br/>
+                    더 나아가 누군가의 상상이 될수있는 <span>UI/UX 개발자</span>가 되고자합니다.
+                    <p>
+                    <br/>
+                    * 본 페이지는 비상업적 목적의 개인포트폴리오 페이지입니다.
+                    </p>
+                    </h2>
+                </div>
                 <MainImage/>
             </TitleBox>
+            <MySlfe>
+
+            </MySlfe>
             <TeamProject>
                 <div className="team-project">
                     <span>Team Project</span>
@@ -83,12 +88,11 @@ const LandingSection = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 70px;
+    padding: 100px 150px;
     width: 100%;
     
     .my-position{
         display: flex;
-        margin-bottom: 170px;
         animation: fade 1s forwards;
         >li {
             padding-right: 40px;
@@ -120,8 +124,11 @@ const LandingSection = styled.div`
 const TitleBox = styled.div`
     
     display: flex;
-    flex-direction: column;
     height: 100%;
+    margin: 170px 0px;
+
+    .title-box{
+    }
     
     h1 {
         font-size: 6rem;
@@ -221,6 +228,8 @@ const TitleBox = styled.div`
     }
 
 
+`
+const MySlfe = styled.div`
 `
 const TeamProject = styled.div`
     width: 100%;
@@ -327,8 +336,6 @@ const PersonalDesign = styled.div`
         width: 80%;
     }
 `
-
-
 const DesignCard = styled.img`
     width: 100px;
     height: 100px;

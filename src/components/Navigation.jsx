@@ -28,18 +28,18 @@ const handleClickNav = () =>{
 const NavigationBox = styled.div`
     position: fixed;
     width: 100%;
-    top:0px;
+    top: 0px;
     left: 0px;
 
     .logo {
         position: fixed;
-        top: 40px;
-        right: 40px;
+        top: 80px;
+        right: 150px;
         z-index: 3;
     }
 
     .logo > img{
-        width: 40px;
+        width: 65px;
         cursor: pointer;
         
     }
@@ -66,7 +66,7 @@ const NavigationBox = styled.div`
         position: fixed;
         width: 100%;
         background-color: rgba(0,0,0,0.5);
-        backdrop-filter: blur(40px);
+        backdrop-filter: blur(30px);
         transition: all ease-in-out 0.3s;
         height: ${props => props.height || "0%"};
         overflow: hidden;
@@ -79,9 +79,38 @@ const NavigationBox = styled.div`
     }
     
     .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
         margin: 30px;
         font-size: 2rem;
-        font-family:'GmarketB';
+        height: 50px;
+        span{font-family:'GmarketM';}
+        transition: all ease-in-out 0.3s;
+    }
+
+    .menu::before{
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 50%;
+        border-top:2px solid var(--color-main-002);
+        border-bottom:2px solid var(--color-main-002);
+        transition: all ease-in-out 0.3s;
+        padding: 10px 0px;
+    }
+
+    .menu:hover{
+        letter-spacing: 10px;
+        span{font-family:'GmarketL';}
+    }
+
+    .menu:hover::before{
+        width: 100%;
     }
 
     .menu-ani-001{opacity:0; animation: menuAnimation 0.3s forwards 0s;}
@@ -92,6 +121,18 @@ const NavigationBox = styled.div`
     @keyframes menuAnimation {
         0%{opacity: 0; transform: translateY(-20px);}
         100%{opacity: 1;transform: translateY(0px);}
+    }
+
+    @media (max-width: 1020px) {
+        .logo {
+        top: 20px;
+        right: 20px;
+    }
+
+    .logo > img{
+        width: 30px;
+        
+    }
     }
 
 `
