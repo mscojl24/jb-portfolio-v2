@@ -8,7 +8,7 @@ import {
   SiAdobephotoshop,
   SiAdobeillustrator,
 } from "react-icons/si";
-import { RiFilePpt2Fill,RiFileWord2Fil,RiFileExcel2Fill, RiFileWord2Fill } from "react-icons/ri";
+import { RiFilePpt2Fill,RiFileExcel2Fill, RiFileWord2Fill } from "react-icons/ri";
 
 export const toolData = [
   {
