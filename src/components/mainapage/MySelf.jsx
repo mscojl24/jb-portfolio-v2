@@ -38,7 +38,7 @@ const MyselfeBox = styled.div`
             width: 700px;
             height: 370px;
             transform: translateX(-150px);
-            background: url(./asset/image/main-image3.png);
+            background: url(https://mscojl24.github.io/jb-portfolio-v2/asset/image/main-image3.png);
             background-position: center;
             background-size: 770px;
             animation: movingImage 3s infinite;

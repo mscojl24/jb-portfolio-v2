@@ -85,7 +85,7 @@ const MyProfileBox = styled.article`
         right: 0px;
         width: 400px;
         height: 560px;
-        background: url(./asset/image/my_profile_image.png);
+        background: url(https://mscojl24.github.io/jb-portfolio-v2/asset/image/my_profile_image.png);
         opacity: 0;
         animation: fadeIn 0.6s forwards 2s;
         object-fit: cover;

@@ -47,7 +47,7 @@ const Background = styled.div`
 position: relative;
     display: flex;
     width: 100%;
-    background : url(./asset/image/background-main.png);
+    background : url(https://mscojl24.github.io/jb-portfolio-v2/asset/image/background-main.png);
     background-attachment: fixed;
     background-size: cover;
     overflow: scroll;

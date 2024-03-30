@@ -47,7 +47,7 @@ const DetailBox = styled.aside`
     overflow: hidden;
     border-left: 1px solid var(--color-main-002);
     z-index: 99;
-    background: url(./asset/image/background-main.png) fixed;
+    background: url(https://mscojl24.github.io/jb-portfolio-v2/asset/image/background-main.png) fixed;
     background-size: cover;
 
     /* &.close{
