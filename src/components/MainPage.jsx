@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LandingPage2 } from "./LandingPage2";
+import { LandingPage } from "./LandingPage";
 import { Navigation } from "./Navigation";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MySkill } from "./MySkill";
@@ -28,7 +28,7 @@ export function MainPage() {
             <MainSection>
                 <ContentsBox>
                     <Routes>
-                        <Route path="/" element={<LandingPage2 />} />
+                        <Route path="/" element={<LandingPage />} />
                         <Route path="/myskill" element={<MySkill />} />
                         <Route path="/portfolio" element={<Portfolio />} />
                         <Route path="/closing" element={<Closing />} />

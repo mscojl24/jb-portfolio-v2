@@ -50,13 +50,6 @@ const DetailBox = styled.aside`
     background: url(https://mscojl24.github.io/jb-portfolio-v2/asset/image/background-main.png) fixed;
     background-size: cover;
 
-    /* &.close{
-        animation: closeBox 1s forwards;
-        @keyframes closeBox {
-            100%{width: 0%;}
-        }
-    } */
-
     &.open{
         animation: opacityBox 1s forwards;
         @keyframes opacityBox {

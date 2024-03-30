@@ -1,15 +1,14 @@
 import styled from "styled-components";
 import { MainImage } from "./MainImage";
-import { IoIosArrowForward } from "react-icons/io";
-import { designData } from "../data/designData"
+import { MySelf } from "./mainapage/MySelf";
+import { MyProject } from "./mainapage/MyProject";
 
 export function LandingPage() {
 
     return (
         <LandingSection>
-
             <ul className="my-position">
-                <li>WEB DESIGN</li>
+                <li>DESIGN</li>
                 <li>FRONTEND</li>
                 <li>PUBLISING</li>
             </ul>
@@ -29,12 +28,10 @@ export function LandingPage() {
                         <span className="title title-motion11">O</span>
                         <span className="title title-motion12">L</span>
                         <span className="title title-motion13">I</span>
-                        <span className="title title-motion14">O</span>
-                        
-                        
+                        <span className="title title-motion14">O</span> 
                     </h1>
                     <h2>
-                    디자인과 프론트엔드 개발을 좋아하는 김주비 입니다. 상상할수 있는것을 구현하며, <br/>
+                    디자인과 프론트엔드 개발을 좋아하는 김주비 입니다. 상상할수 있는것을 구현하며,
                     더 나아가 누군가의 상상이 될수있는 <span>UI/UX 개발자</span>가 되고자합니다.
                     <p>
                     <br/>
@@ -44,51 +41,19 @@ export function LandingPage() {
                 </div>
                 <MainImage/>
             </TitleBox>
-            <MySlfe>
-
-            </MySlfe>
-            <TeamProject>
-                <div className="team-project">
-                    <span>Team Project</span>
-                    <button>MORE <IoIosArrowForward/></button>
-                </div>
-                <ul className="project-card">
-                    <li>
-                        <img className="projext-image" src="./asset/image/design/067.png" alt=""/>
-                        <div className="project-text">
-                            <h2>UNCOVER</h2>
-                            <p>저작권 무료음원 플랫폼</p>
-                        </div>
-                    </li>
-                    <li>
-                    <img className="projext-image" src="./asset/image/design/071.png" alt=""/>
-                        <div className="project-text">
-                            <h2>TICAT</h2>
-                            <p>지역 축제안내 서비스</p>
-                        </div>
-                    </li>
-                </ul>
-            </TeamProject>
-            <PersonalDesign>
-                <div className="team-project">
-                    <span>Personal Design</span>
-                    <button>MORE <IoIosArrowForward/></button>
-                </div>
-                <div className="personal-design">
-                    {designData.slice(0, 24).map((item,index) => (
-                        <DesignCard src={item.image[0]} alt={item.name} sec={(index + 1) * 0.1} key={index}/>
-                    ))}
-                </div>
-            </PersonalDesign>
+            <MySelf />
+            <MyProject />
         </LandingSection>
   );
 }
+
+
 
 const LandingSection = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 100px 150px;
+    margin: 100px 150px;
     width: 100%;
     
     .my-position{
@@ -104,7 +69,7 @@ const LandingSection = styled.div`
 @media (max-width: 1050px) {
         justify-content: center;
         align-items: center;
-
+        margin: 30px 20px;
         .my-position{
         >li {
             padding: 10px;
@@ -112,9 +77,9 @@ const LandingSection = styled.div`
         }
     }
 
-    @media (max-width: 540px) {
+@media (max-width: 540px) {
         padding: 30px;
-        font-size: 0.7em;
+        font-size: 0.9em;
         >li {
             padding: 0px;
         }
@@ -124,10 +89,11 @@ const LandingSection = styled.div`
 const TitleBox = styled.div`
     
     display: flex;
-    height: 100%;
-    margin: 170px 0px;
-
+    
     .title-box{
+        padding: 12% 0px;
+        width: 100%;
+        height: 40%;
     }
     
     h1 {
@@ -138,7 +104,7 @@ const TitleBox = styled.div`
 
     h2{
         line-height: 180%;
-        width: 580px;
+        width: 570px;
         animation: fade 1s forwards;
         >p{
             color: var(--color-main-003)
@@ -151,12 +117,14 @@ const TitleBox = styled.div`
     }
     @media (max-width: 1050px) {
         text-align: center;
-        
+        flex-direction: column;
+
+        .title-box{
+        padding: 20% 0px;
+        }
+
         h1 {
             font-size: 4em;
-        }
-        h2{
-            width: auto;
         }
     
     @media (max-width: 540px) {
@@ -167,13 +135,10 @@ const TitleBox = styled.div`
         }
         h2{
             width: auto;
+            margin: 30px;
         }
         }
     }
-
-
-
-
 
     /**타이틀 모션 css */
 
@@ -227,127 +192,5 @@ const TitleBox = styled.div`
         }
     }
 
-
-`
-const MySlfe = styled.div`
-`
-const TeamProject = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 200px;
-
-    .team-project{
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-
-        span{
-            font-size: 1.2rem;
-            font-family: 'GmarketM';
-            margin-right: 20px;
-        }
-
-        button{
-            display: flex;
-            align-items: center;
-            width: 120px;
-            height: 35px;
-            justify-content: space-between;
-            border:2px solid var(--color-main-002);
-            background: none;
-            color: var(--color-main-001);
-            padding: 5px 20px;
-            border-radius: 50px;
-        }
-    }
-
-    .project-card{
-        display: flex;
-    }
-
-    .project-card>li{
-        display: flex;
-        align-items: center;
-        margin-right: 10px;
-        width: 520px;
-        height: 160px;
-        background-color: rgba(240,240,240,0.1);
-        border-radius: 10px;
-        box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
-
-        .projext-image{
-            margin: 0px 30px;
-            width: 170px;
-            height: 105px;
-            background-color: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            object-fit: cover;
-
-        }
-
-        .project-text {
-
-            h2{
-                font-size: 1.2rem;
-                font-family: 'GmarketM';
-                margin-bottom: 10px;
-            }
-        }
-    }
-
-
-`
-const PersonalDesign = styled.div`
-     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 160px;
-
-    .team-project{
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-
-        span{
-            font-size: 1.2rem;
-            font-family: 'GmarketM';
-            margin-right: 20px;
-        }
-
-        button{
-            display: flex;
-            align-items: center;
-            width: 120px;
-            height: 35px;
-            justify-content: space-between;
-            border:2px solid var(--color-main-002);
-            background: none;
-            color: var(--color-main-001);
-            padding: 5px 20px;
-            border-radius: 50px;
-        }
-    }   
-
-    .personal-design{
-        width: 80%;
-    }
-`
-const DesignCard = styled.img`
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 5px;
-    /* animation: movingAnimation 1s infinite ${props => props.sec}s; */
-    opacity: 0.3;
-    transition: ease-in-out all 0.3s;
-
-    &:hover {
-       opacity: 1;
-    }
 
 `
