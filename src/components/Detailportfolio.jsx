@@ -14,18 +14,18 @@ export function DetailProtfolio() {
 
   return (
     <DetailBox className={close && 'open'}>
-        <BackBtn onClick={()=>{handlePrev()}}><IoIosArrowBack /> <span>이전페이지</span></BackBtn>
-        <ContentsBox>
+        <BackBtn onClick={()=>{handlePrev()}} className="flex-all-center"><IoIosArrowBack /> <span>이전페이지</span></BackBtn>
+        <ContentsBox className="flex-all-center column">
             <p>TEAM PROJECT</p>
             <h1>{detail.name}</h1>
             <h2>{detail.contents}</h2>
-            <ul className="skill-icon">
+            <ul className="flex-all-center skill-icon">
             {detail.skill.map((item)=>(
                 <li>{item}</li>
             ))}
             </ul>
         </ContentsBox>
-        <ImageBox>
+        <ImageBox className="flex-h-center column">
             {detail.image.map((item)=>(
                 <li><img src={item} alt={detail.name} /></li>
             ))}
@@ -57,14 +57,9 @@ const DetailBox = styled.aside`
         }
     }
 `
-
 const ContentsBox = styled.div`
     margin: 100px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
     >*{margin: 20px;}
     p{color:var(--color-sub-002);letter-spacing: 1px;}
@@ -72,9 +67,6 @@ const ContentsBox = styled.div`
     h2{ width: 50%; line-height:200%; color:var(--color-main-002);}
 
     .skill-icon{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         flex-wrap: wrap;
         width: 100%;
 
@@ -100,9 +92,6 @@ const ContentsBox = styled.div`
     }
 `
 const ImageBox = styled.ul`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
 
     li{
@@ -128,10 +117,6 @@ const BackBtn = styled.button`
     top: 100px;
     width: 190px;
     height: 60px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.1rem;
     color:var(--color-main-003);
     transition: all ease-in-out 0.3s;

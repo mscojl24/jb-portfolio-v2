@@ -69,11 +69,11 @@ const handleClickImg = (item) => {
                     <CardList key={index} src={item.image[0]} sec={index * 0.1} onClick={()=>{handleClickImg(item)}}
                       onMouseEnter={() => handleMouseEnter(item.index)}
                       onMouseLeave={handleMouseLeave}
-                      className={hoveredComponent === 'all' ? '' : 'blurred'}
+                      className={hoveredComponent === 'all' ? 'flex-all-center' : 'flex-all-center blurred'}
                     >
                       <div className="more-image">
                         {item.image.length > 1 && <p><PiImagesSquareDuotone /></p>}
-                        {!item.Personal && <p className="font-size colorT"><TfiLayoutListThumb /></p> }
+                        {!item.Personal && <p className="font-size colorT flex-all-center"><TfiLayoutListThumb /></p> }
                       </div>
                       <div className="speech-bubble">{item.name}</div>
                     </CardList>
@@ -141,9 +141,6 @@ const CardList = styled.li`
       position: relative;
       box-sizing: border-box;
       filter: blur(0px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
       position: relative;
       width: 300px;
       height: 300px;
@@ -163,9 +160,6 @@ const CardList = styled.li`
         right: 15px;
         display: flex;
         P{
-          display: flex;
-          justify-content: center;
-          align-items: center;
           padding: 5px;
           background-color: rgba(255,255,255,0.4);
           border-radius: 5px;

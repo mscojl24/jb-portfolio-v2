@@ -12,19 +12,17 @@ export function SwiperImage() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        if (detailImg.image.length > 1) {
-            setArrowActive(false);
-        }
-    }, [detailImg.image.length]);
-
-    useEffect(() => {
         const imgElement = document.querySelector('.card-image');
         if (imgElement) {
             imgElement.classList.remove('animate-image');
             void imgElement.offsetWidth; // Force reflow to restart the animation
             imgElement.classList.add('animate-image');
         }
-    }, [currentIndex]);
+        
+        if (detailImg.image.length > 1) {
+            setArrowActive(false);
+        }
+    }, [currentIndex, detailImg.image.length]);
 
     const handlePrev = (event) => {
         setCurrentIndex(prevIndex => (prevIndex === 0 ? detailImg.image.length - 1 : prevIndex - 1));
@@ -37,10 +35,10 @@ export function SwiperImage() {
     };
 
   return (
-                <SwiperCard>
-                    <ButtonArrow active={arrowActive ? "001" : "003"} onClick={handlePrev}><IoIosArrowBack/></ButtonArrow>
+                <SwiperCard className="flex-all-center">
+                    <ButtonArrow className="flex-all-center" active={arrowActive ? "001" : "003"} onClick={handlePrev}><IoIosArrowBack/></ButtonArrow>
                     <img src={detailImg.image[currentIndex]} alt={detailImg.name} className="card-image"/>
-                    <ButtonArrow active={arrowActive ? "001" : "003"} onClick={handleNext}><IoIosArrowForward/></ButtonArrow>
+                    <ButtonArrow className="flex-all-center" active={arrowActive ? "001" : "003"} onClick={handleNext}><IoIosArrowForward/></ButtonArrow>
                 </SwiperCard>
   );
 }
@@ -48,9 +46,6 @@ export function SwiperImage() {
 const SwiperCard = styled.div`
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     .card-image{
         opacity: 0;
@@ -79,9 +74,6 @@ const SwiperCard = styled.div`
 `
 
 const ButtonArrow = styled.button`
-display: flex;
-justify-content: center;
-align-items: center;
     color: var(--color-main-${props => props.active || "001"});
     background: none;
     font-size: 3rem;

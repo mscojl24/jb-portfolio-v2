@@ -21,7 +21,7 @@ export function MyStack() {
                 <StackContent>
                 <h2>STACK</h2>
                 <ul className="icons-box">
-                    {stackData.map((item,idx)=>(<li key={idx} className={`skill-icon ${
+                    {stackData.map((item,idx)=>(<li key={idx} className={`skill-icon flex-all-center ${
                 skillIdx === item.index && `icon-click`
                 }`} onClick={() => {handelSkillIcon(item,item.index)}}>{item.icon} {item.name}</li>))}
                 </ul>
@@ -30,7 +30,7 @@ export function MyStack() {
                 <StackContent>
                 <h2>TOOL</h2>
                 <ul className="icons-box">
-                    {toolData.map((item,idx)=>(<li key={idx} className={`skill-icon ${
+                    {toolData.map((item,idx)=>(<li key={idx} className={`skill-icon flex-all-center ${
                 skillIdx === item.index && `icon-click`
                 }`} onClick={() => {handelSkillIcon(item,item.index)}}>{item.icon} {item.name}</li>))}
                 </ul>
@@ -39,7 +39,7 @@ export function MyStack() {
                 <StackContent>
                 <h2>STUDYING</h2>
                 <ul className="icons-box">
-                    {studyingData.map((item,idx)=>(<li key={idx} className="skill-icon">{item.icon} {item.name}</li>))}
+                    {studyingData.map((item,idx)=>(<li key={idx} className="skill-icon flex-all-center">{item.icon} {item.name}</li>))}
                 </ul>
                 </StackContent>
             </MyStackBox>
@@ -75,9 +75,6 @@ const StackContent = styled.div`
 
     
     .skill-icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         font-size: 0.6rem;
         margin: 5px;
         text-transform: uppercase;

@@ -35,9 +35,9 @@ export function MainPage() {
                     </Routes>
                 </ContentsBox>
             </MainSection>
-            <NavSection>
+            <div>
                 <Navigation/>
-            </NavSection>
+            </div>
         </Background>
     </BrowserRouter>
   );
@@ -76,8 +76,6 @@ const MainSection = styled.section`
     display: flex;
     flex-direction: column;
     width: 100%;
-`
-const NavSection = styled.section`
 `
 const ContentsBox = styled.aside`
     display: flex;

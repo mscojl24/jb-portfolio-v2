@@ -10,7 +10,7 @@ export function SkillData() {
 
   return (
             <SkillDataBox gauge={skillData.gauge}>
-                <div className="margin-box"> 
+                <div className="margin-box flex-all-center column"> 
                   {skillData.icon}
                   <h2 className="skill-name">{skillData.name}</h2>
                   <div className="gauge-box">
@@ -26,10 +26,6 @@ const SkillDataBox = styled.article`
     width: 100%;
 
     .margin-box{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       margin: 70px;
       height: calc(100% - 160px);
       text-align: center;

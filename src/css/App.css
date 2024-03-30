@@ -85,3 +85,27 @@ button {
 
 a{text-decoration: none;}
 *{cursor: url(https://cur.cursors-4u.net/others/oth-1/oth69.cur), auto !important;}
+
+
+
+.flex-all-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-h-center{
+	display: flex;
+	align-items: center;
+}
+
+
+.flex-v-center{
+	display: flex;
+	justify-content: center;
+}
+
+.column{
+	flex-direction: column;
+}
+
