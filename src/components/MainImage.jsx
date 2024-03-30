@@ -3,11 +3,11 @@ import styled from "styled-components";
 export function MainImage() {
   return (
             <MainImageBox>
-                <img src="./asset/image/main-image.png" alt="main image"/>
-                <img src="./asset/image/main-image.png" alt="main image"/>
-                <img src="./asset/image/main-image.png" alt="main image"/>
-                <img src="./asset/image/main-image.png" alt="main image"/>
-                <img src="./asset/image/main-image.png" alt="main image"/>
+                <img src="./asset/image/main-image.png" alt="메인 이미지" />
+                <img src="./asset/image/main-image.png" alt="메인 이미지" />
+                <img src="./asset/image/main-image.png" alt="메인 이미지" />
+                <img src="./asset/image/main-image.png" alt="메인 이미지" />
+                <img src="./asset/image/main-image.png" alt="메인 이미지" />
             </MainImageBox>
   );
 }

@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { FaHtml5 } from "react-icons/fa";
 import { useRecoilState } from "recoil";
 import { SkillDataState } from "../../atom/skillIcon";
 
 
 export function SkillData() {
 
-  const [ skillData, setSkillData] = useRecoilState(SkillDataState);
+  const [ skillData,] = useRecoilState(SkillDataState);
 
 
   return (

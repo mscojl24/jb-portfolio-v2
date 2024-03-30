@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { MainImage } from "./MainImage";
-import { IoIosArrowForward } from "react-icons/io";
-import { designData } from "../data/designData"
 import { MySelf } from "./mainapage/MySelf";
 import { MyProject } from "./mainapage/MyProject";
 

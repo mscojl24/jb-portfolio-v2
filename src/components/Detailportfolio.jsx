@@ -1,13 +1,11 @@
 import { IoIosArrowBack } from "react-icons/io";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { detailImgState, sidePageOpenState } from "../atom/swiperopen";
-import { useState } from "react";
 
 export function DetailProtfolio() {
 
-    const [detail,setDetail] = useRecoilState(detailImgState);
+    const [detail,] = useRecoilState(detailImgState);
     const [close, setClose] = useRecoilState(sidePageOpenState);
 
     const handlePrev = () => {
@@ -49,7 +47,7 @@ const DetailBox = styled.aside`
     overflow: hidden;
     border-left: 1px solid var(--color-main-002);
     z-index: 99;
-    background: url('./asset/image/background-main.png') fixed;
+    background: url(./asset/image/background-main.png) fixed;
     background-size: cover;
 
     /* &.close{

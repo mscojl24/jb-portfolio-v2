@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {designData} from "../data/designData"
 import { useState } from "react";
-import { SwiperImage } from "./SwiperImage";
 import { useRecoilState } from "recoil";
 import { detailImgState, sidePageOpenState, swiperOpenState } from "../atom/swiperopen";
 import { PiImagesSquareDuotone } from "react-icons/pi";

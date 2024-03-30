@@ -5,19 +5,17 @@ import { detailImgState } from "../atom/swiperopen";
 
 import { IoIosArrowForward,IoIosArrowBack } from "react-icons/io";
 
-
 export function SwiperImage() {
 
     const [detailImg] = useRecoilState(detailImgState)
     const [arrowActive, setArrowActive] = useState(true)
     const [currentIndex, setCurrentIndex] = useState(0);
 
-
     useEffect(() => {
-        if (detailImg.image.length <= 1) {
+        if (detailImg.image.length > 1) {
             setArrowActive(false);
         }
-    }, []);
+    }, [detailImg.image.length]);
 
     useEffect(() => {
         const imgElement = document.querySelector('.card-image');
