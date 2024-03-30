@@ -13,7 +13,7 @@ const handleClickNav = () =>{
 
   return (
         <NavigationBox height={`${navClick ? "100%" : "0%"}`}>
-            <div className="logo" onClick={()=>{handleClickNav()}} ><img src="./asset/image/logo_image.png" alt="로고 이미지"/></div>
+            <div className="logo" onClick={()=>{handleClickNav()}} ><img src="https://mscojl24.github.io/jb-portfolio-v2/asset/image/logo_image.png" alt="로고 이미지"/></div>
             <ul className="flex-all-center column">
                 <Link to="/" onClick={()=>{handleClickNav()}}><li className="menu flex-all-center menu-ani-001"><span>MAIN</span></li></Link>
                 <Link to="/myskill" onClick={()=>{handleClickNav()}}><li className="menu flex-all-center menu-ani-002"><span>MY SKILL</span></li></Link>
