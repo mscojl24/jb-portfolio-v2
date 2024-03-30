@@ -49,7 +49,7 @@ const DetailBox = styled.aside`
     overflow: hidden;
     border-left: 1px solid var(--color-main-002);
     z-index: 99;
-    background: url('/asset/image/background-main.png') fixed;
+    background: url('./asset/image/background-main.png') fixed;
     background-size: cover;
 
     /* &.close{
