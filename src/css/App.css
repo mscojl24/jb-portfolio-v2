@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Noto+Sans+KR:wght@100..900&display=swap');
 @font-face {
     font-family: 'GmarketB';
-    src: url('../font/GmarketSansBold.otf') format('truetype');
+    src: url('https://mscojl24.github.io/jb-portfolio-v2/asset/image/font/GmarketSansBold.otf') format('truetype');
 }
 
 @font-face {
     font-family: 'GmarketL';
-    src: url('../font/GmarketSansLight.otf') format('truetype');
+    src: url('https://mscojl24.github.io/jb-portfolio-v2/asset/image/font/GmarketSansLight.otf') format('truetype');
 }
 
 @font-face {
     font-family: 'GmarketM';
-    src: url('../font/GmarketSansMedium.otf') format('truetype');
+    src: url('https://mscojl24.github.io/jb-portfolio-v2/asset/image/font/GmarketSansMedium.otf') format('truetype');
 }
 
 

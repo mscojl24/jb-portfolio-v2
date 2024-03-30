@@ -19,7 +19,7 @@ export function MainPage() {
     }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Background>
             {sideOpen && <DetailProtfolio/>}
             {swiperOpen && <div className="fix-box" onClick={()=>{handleClick()}}>
