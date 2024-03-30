@@ -54,14 +54,14 @@ export function LandingPage() {
                 </div>
                 <ul className="project-card">
                     <li>
-                        <img className="projext-image" src="/asset/image/design/067.png" alt=""/>
+                        <img className="projext-image" src="./asset/image/design/067.png" alt=""/>
                         <div className="project-text">
                             <h2>UNCOVER</h2>
                             <p>저작권 무료음원 플랫폼</p>
                         </div>
                     </li>
                     <li>
-                    <img className="projext-image" src="/asset/image/design/071.png" alt=""/>
+                    <img className="projext-image" src="./asset/image/design/071.png" alt=""/>
                         <div className="project-text">
                             <h2>TICAT</h2>
                             <p>지역 축제안내 서비스</p>

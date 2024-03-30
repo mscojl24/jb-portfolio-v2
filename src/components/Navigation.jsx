@@ -13,7 +13,7 @@ const handleClickNav = () =>{
 
   return (
         <NavigationBox height={`${navClick ? "100%" : "0%"}`}>
-            <div className="logo" onClick={()=>{handleClickNav()}} ><img src="../asset/image/logo_image.png" alt="logo image"/></div>
+            <div className="logo" onClick={()=>{handleClickNav()}} ><img src="./asset/image/logo_image.png" alt="logo image"/></div>
             <ul>
                 <Link to="/" onClick={()=>{handleClickNav()}}><li className="menu menu-ani-001"><span>MAIN</span></li></Link>
                 <Link to="/myskill" onClick={()=>{handleClickNav()}}><li className="menu menu-ani-002"><span>MY SKILL</span></li></Link>
