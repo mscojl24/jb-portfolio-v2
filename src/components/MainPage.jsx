@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { LandingPage } from "./LandingPage";
 import { Navigation } from "./Navigation";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { MySkill } from "./MySkill";
 import { Portfolio } from "./Portfolio";
 import { Closing } from "./Closing";
@@ -19,7 +19,7 @@ export function MainPage() {
     }
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
         <Background>
             {sideOpen && <DetailProtfolio/>}
             {swiperOpen && <div className="fix-box" onClick={()=>{handleClick()}}>
@@ -39,7 +39,7 @@ export function MainPage() {
                 <Navigation/>
             </div>
         </Background>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
