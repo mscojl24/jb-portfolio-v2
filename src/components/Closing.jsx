@@ -1,11 +1,21 @@
 import styled from "styled-components";
-
+import { IoLogoGithub } from "react-icons/io5";
+import { RiKakaoTalkFill } from "react-icons/ri";
 
 export function Closing() {
+
+  const linkKakao = () =>{
+    window.open("https://open.kakao.com/o/sMg43KVf", '_blank', 'noopener,noreferrer')
+  }
+
+  const linkGithub = () =>{
+    window.open("https://github.com/mscojl24", '_blank', 'noopener,noreferrer')
+  }
+
   return (
         <ClosingBox className="flex-all-center column">
             <div className="text-box cinematicText01">
-              <p>Hllow Everyone</p>
+              <p>Hellow Everyone</p>
               <h1>
               It’s My<br/>
               PortFolio
@@ -19,6 +29,10 @@ export function Closing() {
               <div>😎</div>
               <p>kimjubee@gmail.com</p>
               <h1>많은 관심 부탁드립니다!</h1>
+              <ul className="button-sns flex-all-center">
+                <li onClick={()=>{linkKakao()}}><RiKakaoTalkFill /> 오픈채팅방 연결하기</li>
+                <li onClick={()=>{linkGithub()}}><IoLogoGithub /> 깃허브 보러가기</li>
+              </ul>
             </div>
         </ClosingBox>
   );
@@ -49,7 +63,31 @@ const ClosingBox = styled.div`
         color:var(--color-main-001);
       }
       div{
-        font-size: 10rem;
+        font-size: 6rem;
+      }
+
+      .button-sns{
+        margin-top: 30px;
+        :nth-child(1){
+          margin-right: 10px;
+        }
+        li{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid var(--color-main-003);
+          padding: 20px 30px;
+          margin: 10px;
+          border-radius: 5px;
+          color: var(--color-main-002);
+          background-color: var(--color-main-004);
+          transition: all ease-in-out 0.3s;
+        }
+
+        li:hover{
+          color: var(--color-sub-002);
+          border-color: var(--color-sub-002);
+        }
       }
     }
 

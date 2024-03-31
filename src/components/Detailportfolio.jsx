@@ -2,6 +2,9 @@ import { IoIosArrowBack } from "react-icons/io";
 import styled from "styled-components";
 import { useRecoilState } from "recoil";
 import { detailImgState, sidePageOpenState } from "../atom/swiperopen";
+import { MdReportGmailerrorred } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
+import { useState } from "react";
 
 export function DetailProtfolio() {
 
@@ -12,8 +15,17 @@ export function DetailProtfolio() {
         setClose(!close)
     }   
 
+    const linkUrl = (url) =>{
+            window.open(url, '_blank', 'noopener,noreferrer')
+    }
+
   return (
     <DetailBox className={close && 'open'}>
+        {detail.siteurl === "null" && <div className="modal-box flex-all-center">
+            <MdReportGmailerrorred />
+            <span>앗, 죄송해요! 현재는 해당 프로젝트의 웹사이트를 감상할수 없어요.</span>
+            <IoClose />
+        </div>}
         <BackBtn onClick={()=>{handlePrev()}} className="flex-all-center"><IoIosArrowBack /> <span>이전페이지</span></BackBtn>
         <ContentsBox className="flex-all-center column">
             <p>TEAM PROJECT</p>
@@ -31,9 +43,9 @@ export function DetailProtfolio() {
             ))}
         </ImageBox>
         <ButtonGroup>
-            <button className="button-link">Web site</button>
-            <button className="button-link">Git Hub</button>
-            <button className="button-link">Figma</button>
+            {detail.siteurl !== "" && <button className="button-link" onClick={()=>{linkUrl(detail.siteurl,"web")}}>Web site</button>}
+            {detail.github !== "" && <button className="button-link" onClick={()=>{linkUrl(detail.github,"git")}}>Git Hub</button>}
+            {detail.figma !== "" && <button className="button-link" onClick={()=>{linkUrl(detail.figma,"figma")}}>Figma</button>}
         </ButtonGroup>
     </DetailBox>
   );
@@ -54,6 +66,38 @@ const DetailBox = styled.aside`
         animation: opacityBox 1s forwards;
         @keyframes opacityBox {
             100%{width: 100%;}
+        }
+    }
+
+    .modal-box{
+        position: fixed;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50px);
+        background: rgba(50,50,50,0.9);
+        border-radius: 10px;
+        justify-content: space-between;
+        padding: 20px 40px;
+        letter-spacing: 1px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+        font-size: 1.2rem;
+        opacity: 0;
+        animation: modalopen 5s forwards;
+
+        span{
+            margin: 0px 20px;
+            font-size: 1rem;
+        }
+    }
+
+    @keyframes modalopen {
+        20%{
+            opacity: 1;
+            transform: translate(-50%,0px);
+        }
+        80%{
+            opacity: 1;
+            transform: translate(-50%,0px);
         }
     }
 `

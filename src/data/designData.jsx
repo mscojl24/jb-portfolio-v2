@@ -9,9 +9,9 @@ export const designData = [
         skill: ["HTML","CSS","JavaScript","React","Styled-component","Recoil","Figma"],
         category : "WEB",
         sidepage : true,
-        figma: "",
-        siteurl: "",
-        github: "",
+        figma: "https://www.figma.com/file/UY6u7Tpq29rOTAjlee2jF3/%E2%AD%90%EF%B8%8F-Team-project-%2F-UNCOVER---%EC%A0%80%EC%9E%91%EA%B6%8C%EB%AC%B4%EB%A3%8C-%EC%9D%8C%EC%9B%90%EC%A0%9C%EA%B3%B5-%EC%84%9C%EB%B9%84%EC%8A%A4?type=design&node-id=0%3A1&mode=design&t=f0i5GE4PwmzRQoSm-1",
+        siteurl: "null",
+        github: "https://github.com/codestates-seb/seb43_main_017",
         Personal: false,
         pass: false,
         image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/067.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/068.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/069.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/070.png"]
@@ -23,9 +23,9 @@ export const designData = [
         skill: ["HTML","CSS","JavaScript","React","Styled-component","Zustand","Figma"],
         category : "WEB",
         sidepage : true,
-        figma: "",
-        siteurl: "",
-        github: "",
+        figma: "https://www.figma.com/file/3DMIKyoZRmpZbWdfos640M/%E2%AD%90%EF%B8%8F-Team-project-%2F-TICAT---%EC%A7%80%EC%97%AD-%EC%B6%95%EC%A0%9C%EC%95%88%EB%82%B4-%EC%84%9C%EB%B9%84%EC%8A%A4?type=design&node-id=1506%3A1387&mode=design&t=G6GdSahbvonzjyBs-1",
+        siteurl: "null",
+        github: "https://github.com/Butlers-Team/ticat-client",
         Personal: false,
         pass: false,
         image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/071.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/072.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/073.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/074.gif"]
@@ -38,10 +38,10 @@ export const designData = [
         category : "WEB",
         sidepage : true,
         figma: "",
-        siteurl: "",
-        github: "",
+        siteurl: "https://parksubeom.github.io/Project_RetroAnimal_Generator/",
+        github: "https://github.com/mscojl24/Ani_School",
         Personal: false,
-        pass: false,
+        pass: true,
         image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/075.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/076.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/077.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/078.png"]
     },
     {
@@ -52,10 +52,10 @@ export const designData = [
         category : "WEB",
         sidepage : true,
         figma: "",
-        siteurl: "",
-        github: "",
+        siteurl: "https://mscojl24.github.io/jb-prtfolio/#/anischool",
+        github: "https://github.com/mscojl24/jb-prtfolio",
         Personal: false,
-        pass: false,
+        pass: true,
         image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/079.gif","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/080.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/081.png"]
     },
     {
@@ -65,11 +65,11 @@ export const designData = [
         skill: ["HTML","CSS","JavaScript","React","Styled-component","Figma"],
         category : "WEB",
         sidepage : true,
-        figma: "",
-        siteurl: "",
-        github: "",
+        figma: "https://www.figma.com/file/rD2f2LsGgrMH64PjHFTX0F/%F0%9F%91%8D%F0%9F%8F%BB-Personal-Project-%2F-JUBEE-Portfolio?type=design&node-id=1%3A3&mode=design&t=QbeBxLnoNLbxOYtv-1",
+        siteurl: "https://mscojl24.github.io/jb-portfolio-v2/",
+        github: "https://github.com/mscojl24/jb-portfolio-v2",
         Personal: false,
-        pass: false,
+        pass: true,
         image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/082.gif","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/083.gif","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/084.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/085.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/086.png"]
     },
     {
@@ -79,11 +79,11 @@ export const designData = [
         skill: ["Figma"],
         category : "WEB",
         sidepage : true,
-        figma: "",
+        figma: "https://www.figma.com/file/gMsDAMVpAvy18nYYOwlLus/%5B%EB%94%94%EB%B2%A8%EB%A1%9C%EC%BC%93%5D-%EB%B0%98%EC%9D%91%ED%98%95-web-%EB%94%94%EC%9E%90%EC%9D%B8---%EC%83%81%EC%84%B8%ED%8E%98%EC%9D%B4%EC%A7%80?type=design&node-id=11%3A2&mode=design&t=QLzaB1oWU0asky2W-1",
         siteurl: "",
         github: "",
         Personal: false,
-        pass: false,
+        pass: true,
         image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/088.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/089.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/087.png"]
     },
     {
