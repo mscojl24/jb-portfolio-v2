@@ -174,7 +174,6 @@ animation: blur 1s forwards;
 const CardList = styled.li`
       position: relative;
       box-sizing: border-box;
-      filter: blur(0px);
       position: relative;
       width: 300px;
       height: 300px;
@@ -187,6 +186,7 @@ const CardList = styled.li`
       transform: translateY(-40px);
       opacity: 0;
       animation: showCard 0.5s forwards ${props => props.sec || "0"}s;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
 
       .more-image{
         position: absolute;
@@ -206,14 +206,17 @@ const CardList = styled.li`
         }
       }
 
-      /* &.blurred{
-        filter: blur(10px);
-
-      } */
-/* 
-      &:hover{
-        filter: blur(0px);
-      } */
+      &.blurred::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background-color: rgba(0,0,0,0.7);
+        transition: all ease-in-out 0.3s;
+      }
 
       @media (max-width: 1100px) {
         width: 150px;
@@ -233,7 +236,6 @@ const CardList = styled.li`
         position: absolute;
         top: 0px;
         left: 0px;
-        background-color: rgba(0,0,0,0.6);
         width: 100%;
         height: 100%;
         border-radius: 20px;
