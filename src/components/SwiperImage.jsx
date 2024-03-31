@@ -19,7 +19,7 @@ export function SwiperImage() {
             imgElement.classList.add('animate-image');
         }
         
-        if (detailImg.image.length > 1) {
+        if (detailImg.image.length <= 1) {
             setArrowActive(false);
         }
     }, [currentIndex, detailImg.image.length]);

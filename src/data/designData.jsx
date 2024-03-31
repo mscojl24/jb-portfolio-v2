@@ -14,7 +14,7 @@ export const designData = [
         github: "",
         Personal: false,
         pass: false,
-        image : ["./asset/image/design/067.png","./asset/image/design/068.png","./asset/image/design/069.png","./asset/image/design/070.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/067.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/068.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/069.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/070.png"]
     },
     {
         index: 28,
@@ -28,7 +28,7 @@ export const designData = [
         github: "",
         Personal: false,
         pass: false,
-        image : ["./asset/image/design/071.png","./asset/image/design/072.png","./asset/image/design/073.png","./asset/image/design/074.gif"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/071.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/072.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/073.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/074.gif"]
     },
     {
         index: 29,
@@ -42,7 +42,7 @@ export const designData = [
         github: "",
         Personal: false,
         pass: false,
-        image : ["./asset/image/design/075.png","./asset/image/design/076.png","./asset/image/design/077.png","./asset/image/design/078.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/075.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/076.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/077.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/078.png"]
     },
     {
         index: 30,
@@ -56,7 +56,7 @@ export const designData = [
         github: "",
         Personal: false,
         pass: false,
-        image : ["./asset/image/design/079.gif","./asset/image/design/080.png","./asset/image/design/081.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/079.gif","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/080.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/081.png"]
     },
     {
         index: 31,
@@ -70,7 +70,7 @@ export const designData = [
         github: "",
         Personal: false,
         pass: false,
-        image : ["./asset/image/design/082.gif","./asset/image/design/083.gif","./asset/image/design/084.png","./asset/image/design/085.png","./asset/image/design/086.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/082.gif","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/083.gif","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/084.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/085.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/086.png"]
     },
     {
         index: 32,
@@ -84,7 +84,7 @@ export const designData = [
         github: "",
         Personal: false,
         pass: false,
-        image : ["./asset/image/design/088.png","./asset/image/design/089.png","./asset/image/design/087.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/088.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/089.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/087.png"]
     },
     {
         index: 33,
@@ -98,7 +98,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/090.gif","./asset/image/design/091.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/090.gif","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/091.png"]
     },
     {
         index: 34,
@@ -112,7 +112,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/092.gif"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/092.gif"]
     },
     {
         index: 34,
@@ -126,7 +126,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/093.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/093.png"]
     },
     {
         index: 1,
@@ -138,7 +138,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/001.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/001.png"]
     },  
     {
         index: 2,
@@ -150,7 +150,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/002.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/002.png"]
     },  
     {
         index: 3,
@@ -162,7 +162,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/003.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/003.png"]
     },  
     {
         index: 4,
@@ -174,7 +174,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/004.png","./asset/image/design/005.png","./asset/image/design/006.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/004.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/005.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/006.png"]
     }, 
     {
         index: 5,
@@ -186,7 +186,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/007.png","./asset/image/design/008.png","./asset/image/design/009.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/007.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/008.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/009.png"]
     }, 
     {
         index: 6,
@@ -198,7 +198,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/010.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/010.png"]
     },
     {
         index: 7,
@@ -210,7 +210,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/011.jpg"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/011.jpg"]
     },
     {
         index: 8,
@@ -222,7 +222,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/012.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/012.png"]
     },
     {
         index: 17,
@@ -234,7 +234,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/013.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/013.png"]
     },
     {
         index: 9,
@@ -246,7 +246,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/014.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/014.png"]
     },
     {
         index: 10,
@@ -258,7 +258,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/015.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/015.png"]
     },
     {
         index: 11,
@@ -270,7 +270,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/016.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/016.png"]
     },
     {
         index: 12,
@@ -282,7 +282,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/017.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/017.png"]
     },
     {
         index: 13,
@@ -294,7 +294,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/018.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/018.png"]
     },
     {
         index: 14,
@@ -306,7 +306,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/019.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/019.png"]
     },
     {
         index: 15,
@@ -318,7 +318,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/020.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/020.png"]
     },
     {
         index: 16,
@@ -330,7 +330,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/021.png","./asset/image/design/022.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/021.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/022.png"]
     },
     {
         index: 18,
@@ -342,7 +342,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/023.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/023.png"]
     },
     {
         index: 19,
@@ -354,7 +354,7 @@ export const designData = [
         Personal: true,
         github: "",
         pass: false,
-        image : ["./asset/image/design/042.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/042.png"]
     },
     {
         index: 20,
@@ -366,7 +366,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/024.png","./asset/image/design/025.png","./asset/image/design/026.png","./asset/image/design/027.png","./asset/image/design/028.png","./asset/image/design/029.png","./asset/image/design/030.png","./asset/image/design/031.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/024.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/025.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/026.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/027.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/028.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/029.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/030.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/031.png"]
     },
     {
         index: 21,
@@ -378,7 +378,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/032.png","./asset/image/design/033.png","./asset/image/design/034.png","./asset/image/design/035.png","./asset/image/design/036.png","./asset/image/design/037.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/032.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/033.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/034.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/035.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/036.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/037.png"]
     },
     {
         index: 22,
@@ -390,7 +390,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/038.png","./asset/image/design/039.png","./asset/image/design/040.png","./asset/image/design/041.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/038.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/039.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/040.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/041.png"]
     },
     {
         index: 23,
@@ -402,7 +402,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/043.png","./asset/image/design/044.png","./asset/image/design/045.png","./asset/image/design/046.png","./asset/image/design/047.png","./asset/image/design/048.png","./asset/image/design/049.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/043.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/044.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/045.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/046.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/047.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/048.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/049.png"]
     },
     {
         index: 24,
@@ -414,7 +414,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/050.png","./asset/image/design/051.png","./asset/image/design/052.png","./asset/image/design/053.png","./asset/image/design/054.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/050.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/051.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/052.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/053.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/054.png"]
     },
     {
         index: 25,
@@ -426,7 +426,7 @@ export const designData = [
         github: "",
         Personal: true,
         pass: false,
-        image : ["./asset/image/design/055.png","./asset/image/design/056.png","./asset/image/design/057.png","./asset/image/design/058.png","./asset/image/design/059.png","../asset/image/design/060.png","./asset/image/design/061.png","./asset/image/design/062.png","./asset/image/design/063.png"]
+        image : ["https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/055.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/056.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/057.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/058.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/059.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/060.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/061.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/062.png","https://mscojl24.github.io/jb-portfolio-v2/asset/image/design/063.png"]
     },
 
 ] 

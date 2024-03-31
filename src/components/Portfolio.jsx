@@ -12,6 +12,7 @@ export function Portfolio() {
   const [, setSwiperOpen] = useRecoilState(swiperOpenState)
   const [, setDetailImg] = useRecoilState(detailImgState)
   const [, setSideOpen] = useRecoilState(sidePageOpenState)
+  const [clickMenu,setClickMenu ] = useState("ALL")
 
   const [hoveredComponent, setHoveredComponent] = useState('all');
 
@@ -23,24 +24,25 @@ export function Portfolio() {
     setHoveredComponent('all');
   };
 
-  const handleCategory = (category) => {
+const handleCategory = (category) => {
+    let filteredData = [];
 
-    switch(category) {
-        case "ALL":
-            setItem(designData);
-            break;
+    switch (category) {
         case "WEB":
         case "CARDNEWS":
         case "ETC":
-            const filteredData = designData.filter(item => item.category === category);
-            setItem(filteredData);
+            filteredData = designData.filter(item => item.category === category);
             break;
         default:
-            // 기본적으로 "ALL"로 설정
-            setItem(designData);
+            filteredData = designData;
             break;
     }
-}
+
+    setItem([]);
+    setTimeout(() => setItem(filteredData), 0);
+    setClickMenu(category);
+};
+  
 
 const handleClickImg = (item) => {
   setDetailImg(item)
@@ -59,21 +61,21 @@ const handleClickImg = (item) => {
   return (
         <PortfolioBox>
                 <div className="port-category">
-                    <button onClick={()=>{handleCategory("ALL")}}>ALL</button>
-                    <button onClick={()=>{handleCategory("WEB")}}>WEB SITE</button>
-                    <button onClick={()=>{handleCategory("CARDNEWS")}}>CARD NEWS</button>
-                    <button onClick={()=>{handleCategory("ETC")}}>ETC</button>
+                    <button onClick={()=>{handleCategory("ALL")}} className={clickMenu === "ALL" ? 'click-menu' : ''}>ALL</button>
+                    <button onClick={()=>{handleCategory("CARDNEWS")}} className={clickMenu === "CARDNEWS" ? 'click-menu' : ''}>CARD NEWS</button>
+                    <button onClick={()=>{handleCategory("WEB")}} className={clickMenu === "WEB" ? 'click-menu' : ''}>WEB SITE</button>
+                    <button onClick={()=>{handleCategory("ETC")}} className={clickMenu === "ETC" ? 'click-menu' : ''}>ETC</button>
                 </div>
                 <ul className="port-list">
                   {item.map((item,index)=>(
-                    <CardList key={index} src={item.image[0]} sec={index * 0.1} onClick={()=>{handleClickImg(item)}}
+                    <CardList key={index} src={item.image[0]} sec={index * 0.05} onClick={()=>{handleClickImg(item)}}
                       onMouseEnter={() => handleMouseEnter(item.index)}
                       onMouseLeave={handleMouseLeave}
                       className={hoveredComponent === 'all' ? 'flex-all-center' : 'flex-all-center blurred'}
                     >
                       <div className="more-image">
                         {item.image.length > 1 && <p><PiImagesSquareDuotone /></p>}
-                        {!item.Personal && <p className="font-size colorT flex-all-center"><TfiLayoutListThumb /></p> }
+                        {!item.Personal && <p className="font-size colorT"><TfiLayoutListThumb /></p> }
                       </div>
                       <div className="speech-bubble">{item.name}</div>
                     </CardList>
@@ -104,12 +106,43 @@ animation: blur 1s forwards;
         width: 100%;
 
         >button {
-          padding: 0px 30px;
-          height: 30px;
+          position: relative;
+          margin: 0px 15px;
+          height: 50px;
           background: none;
           cursor: pointer;
           color: var(--color-main-001);
+          transition: all ease-in-out 0.3s;
+          border: 5px solid rgba(0,0,0,0);
+          appearance: none;
         }
+
+        >button::before{
+          content: "";
+          position: absolute;
+          top:0px;
+          left: 0px;
+          width: 0%;
+          height: 100%;
+          border-bottom: 3px solid var(--color-sub-002);
+          animation: underbar 0.3s forwards;
+          transition: all ease-in-out 0.3s;
+        }
+
+        >button:hover::before{
+          width: 100%;
+        }
+
+        .click-menu{color:var(--color-sub-002);}
+
+    }
+
+    @keyframes underbar {
+          100%{
+            .click-menu::before{
+              width: 100%;
+            }
+          }
     }
 
     .port-list{
@@ -121,6 +154,7 @@ animation: blur 1s forwards;
       padding-bottom: 300px;
       transition: all ease-in-out 0.3s;
     }
+
     
     
     @keyframes blur {
@@ -160,8 +194,11 @@ const CardList = styled.li`
         right: 15px;
         display: flex;
         P{
+          display: flex;
+          justify-content: center;
+          align-items: center;
           padding: 5px;
-          background-color: rgba(255,255,255,0.4);
+          background-color: rgba(255,255,255,0.7);
           border-radius: 5px;
           margin-left: 5px;
           color: var(--color-main-004);
@@ -169,14 +206,14 @@ const CardList = styled.li`
         }
       }
 
-      &.blurred{
+      /* &.blurred{
         filter: blur(10px);
 
-      }
-
+      } */
+/* 
       &:hover{
         filter: blur(0px);
-      }
+      } */
 
       @media (max-width: 1100px) {
         width: 150px;
@@ -196,10 +233,11 @@ const CardList = styled.li`
         position: absolute;
         top: 0px;
         left: 0px;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.6);
         width: 100%;
         height: 100%;
         border-radius: 20px;
+        transition: all ease-in-out 0.3s;
       }
     
       &:hover{
@@ -207,7 +245,7 @@ const CardList = styled.li`
       
 
         &::before{
-          display: none;
+          background-color: rgba(0,0,0,0);
         }
         
         .speech-bubble {
@@ -221,7 +259,7 @@ const CardList = styled.li`
           box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
           font-size: 0.8rem;
           font-family: 'GmarketM';
-          transform: translateY(-170px);
+          top:-50px;
           opacity: 0;
           animation: moving 0.6s forwards;
         }
@@ -244,7 +282,7 @@ const CardList = styled.li`
     @keyframes moving {
       100%{
         opacity: 1;
-        transform: translateY(-150px);
+        top:-20px;
       }
     }
     
