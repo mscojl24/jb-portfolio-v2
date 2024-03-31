@@ -1,4 +1,4 @@
-# 💜 JUBEE PROTFOLIO
+# 💜 JUBEE PROTFOLIO V2.0
 
 
 <img src="https://github.com/mscojl24/jb-portfolio-v2/assets/119921683/679ffa23-91c9-4f06-a7ac-135152cc33bb" alt="포트폴리오 메인"/>
